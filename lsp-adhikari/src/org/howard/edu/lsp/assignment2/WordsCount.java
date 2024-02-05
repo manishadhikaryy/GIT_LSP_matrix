@@ -36,6 +36,8 @@ public class WordsCount {
 			
 			word = word.toLowerCase();
 			
+			
+			
 			if (isAlpha(word) && word.length() > 3) {
 			
 			wordCount.put(word, wordCount.getOrDefault(word, 0) + 1);
@@ -57,7 +59,7 @@ public class WordsCount {
 	}
 	
 	 private static boolean isAlpha(String str) {
-	        return str.matches("[a-zA-Z]+");
+	        return str.matches(".*[a-zA-Z].*");
 	    }
 
 }
