@@ -14,7 +14,7 @@ public class WordsCount {
 
 	public static void main(String[] args) {
 		
-		String filePath = "lsp-adhikari/src/words.txt";
+		String filePath = "lsp-adhikari/src/org/howard/edu/lsp/assignment2/words.txt";
 		
 //		String inputString = "My name is Manish manish 123";
 		
