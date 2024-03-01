@@ -140,7 +140,7 @@ public class IntegerSet {
 	public static void main(String[] args) {
 		IntegerSet set1 = new IntegerSet();
 		set1.add(1);
-		set1.add(3);
+		set1.add(2);
 		set1.add(3);
 
         System.out.println("Value of Set1 is: " + set1.toString());
