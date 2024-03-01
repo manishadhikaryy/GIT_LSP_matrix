@@ -54,6 +54,7 @@ public class IntegerSet {
 		
 	}
 	
+	// Returns the largest item in the set; Throws a IntegerSetException if the set is empty
 	public int largest() throws IntegerSetException {
 		if (set.isEmpty()) {
 			throw new IntegerSetException("Set is empty");
@@ -68,6 +69,7 @@ public class IntegerSet {
 		return largest; 
 	}
 	
+	// Returns the smallest item in the set; Throws a IntegerSetException if the set is empty
 	public int smallest() throws IntegerSetException {
 		if (set.isEmpty()) {
 			throw new IntegerSetException("Set is empty");
@@ -82,19 +84,20 @@ public class IntegerSet {
 		return smallest; 
 	}
 	
-	
+	// Adds an item to the set or does nothing it already there 
 	public void add(int item) {
 		if (!set.contains(item)) {
 			set.add(item);
 		}
 	}
 	
-	
+	// Removes an item from the set or does nothing if not there
 	public void remove(int item) {
 		set.remove(Integer.valueOf(item));
 		
 	}
 	
+	// Set union
 	public void union (IntegerSet intSetb){
 		for (int num: intSetb.set) {
 			this.add(num);
@@ -102,14 +105,18 @@ public class IntegerSet {
 		
 	}
 
+	
+	// Set intersection
 	public void intersect(IntegerSet intSetb) {
 		set.retainAll(intSetb.set);
 	}
 	
+	// Set Difference
 	public void diff(IntegerSet intSetb) {
 		set.removeAll(intSetb.set);
 	}
 	
+	// Set Complement
 	public void complement(IntegerSet intSetb) {
 		List<Integer> complementSet = new ArrayList<Integer>();
 		for (int i = 0; i < intSetb.set.size(); i++) {
@@ -122,44 +129,22 @@ public class IntegerSet {
 		
 	}
 	
+	// Returns true if the set is empty, false otherwise
 	boolean isEmpty() {
 		return set.isEmpty();
 	}
 	
+	// Return String representation of your set.  This overrides the equal method from
+	// the Object class.
 	public String toString() {
 		return set.toString();
 	}
 	
+	// IntegerSetException class
 	static class IntegerSetException extends RuntimeException {
 		public IntegerSetException(String message ) {
 			super(message);
 		}
 	}
-	
-	
-	public static void main(String[] args) {
-		IntegerSet set1 = new IntegerSet();
-		set1.add(1);
-		set1.add(2);
-		set1.add(3);
-
-        System.out.println("Value of Set1 is: " + set1.toString());
-        System.out.println("Smallest value in Set1 is: " + set1.smallest());
-        System.out.println("Largest value in Set1 is: " + set1.largest());
-
-        IntegerSet set2 = new IntegerSet();
-        set2.add(3);
-        set2.add(4);
-        set2.add(5);
-
-        System.out.println("\nValue of Set2 is: " + set2.toString());
-
-        // Union of Set1 and Set2
-        System.out.println("\nUnion of Set1 and Set2");
-        System.out.println("Value of Set1 is: " + set1.toString());
-        System.out.println("Value of Set2 is: " + set2.toString());
-        set1.union(set2);
-        System.out.println("Result of union of Set1 and Set2: " + set1.toString());
-    }
 
 }
