@@ -1,6 +1,12 @@
 package org.howard.edu.lsp.assignment4;
 import java.util.ArrayList;
 
+/**
+ * A driver class to test the functionality of the IntegerSet class.
+ * It creates instances of IntegerSet, performs various operations on them, and prints the results.
+ * 
+ * @author Manish Adhikari
+ */
 public class Driver {
     public static void main(String[] args) {
         // Test examples
@@ -80,5 +86,17 @@ public class Driver {
         System.out.println("Value of Set2 is: " + set2.toString());
         set1.complement(set2);
         System.out.println("Result of complement of Set1 with respect to Set2: " + set1.toString());
+        
+        
+        
+        System.out.println("\nEmpty Set");
+        set1 = new IntegerSet();
+        System.out.println("Value of Set1 is: " + set1.toString());
+        System.out.println("Is Set1 empty? " + set1.isEmpty());
+        System.out.println("Largest value in Set1 is: " + set1.largest());
+        System.out.println("Smallest value in Set1 is: " + set1.smallest());
+
+
+        
     }
 }
