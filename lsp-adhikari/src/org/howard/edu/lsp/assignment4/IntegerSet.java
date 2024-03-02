@@ -193,7 +193,7 @@ public class IntegerSet {
 	/**
 	 * Exception class for IntegerSet operations.
 	 */
-	static class IntegerSetException extends RuntimeException {
+	public static class IntegerSetException extends RuntimeException {
 		public IntegerSetException(String message ) {
 			super(message);
 		}
