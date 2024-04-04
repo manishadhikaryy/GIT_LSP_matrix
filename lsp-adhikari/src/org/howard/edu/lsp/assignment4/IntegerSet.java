@@ -190,12 +190,12 @@ public class IntegerSet {
 		return set.toString();
 	}
 	
-	/**
-	 * Exception class for IntegerSet operations.
-	 */
-	public static class IntegerSetException extends RuntimeException {
-		public IntegerSetException(String message ) {
-			super(message);
-		}
-	}
+//	/**
+//	 * Exception class for IntegerSet operations.
+//	 */
+//	public static class IntegerSetException extends RuntimeException {
+//		public IntegerSetException(String message ) {
+//			super(message);
+//		}
+//	}
 }
