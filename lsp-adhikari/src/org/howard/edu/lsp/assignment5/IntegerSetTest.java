@@ -131,7 +131,7 @@ public class IntegerSetTest {
 		set1.add(1);
 		assertEquals("the largest value in the set [7,5,1] is 7", 7, set1.largest());
 		
-		assertThrows("when we find out the largest value from the [], it should raise exception", IntegerSetException.class ,
+		assertThrows("when we look for the largest value from the [], it should raise exception", IntegerSetException.class,
 				() -> {
 					set2.largest();
 				}
@@ -150,7 +150,7 @@ public class IntegerSetTest {
 		set1.add(3);
 		assertEquals("the smallest value in the set [1,2,3] is 1", 1, set1.smallest());
 		
-		assertThrows("when we find out the smallest value from the [], it should raise exception", IntegerSetException.class ,
+		assertThrows("when we look for the smallest value from the [], it should raise exception", IntegerSetException.class ,
 				() -> {
 					set2.smallest();
 				}
